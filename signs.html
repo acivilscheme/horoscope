@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Signs</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="icon" href="images/logo.png" type="image/x-icon" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.js"></script>
+    <script src="wheelnav.js-1.7.1/raphael.min.js"></script>
+    <script src="wheelnav.js-1.7.1/wheelnav.js"></script>
+    <script src="signsScript.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#lButton").hover(
+                function(){$(this).finish().animate({left: "+=150px"});}, 
+                function(){$(this).finish().animate({left: "-=150px"});}
+            );
+            $("#lButton").click(function(){$(location).attr("href", "index.html");});
+
+            $("#rButton").hover(
+                function(){$(this).finish().animate({right: "+=175px"});}, 
+                function(){$(this).finish().animate({right: "-=175px"});}
+            );
+            $("#rButton").click(function(){
+                $("#datepicker").datepicker("show");
+            });
+        });
+    </script>
+    <style>
+        body{
+            overflow: hidden;
+        }
+        input:focus{
+            outline: none;
+        }
+        #lButton:hover, #rButton:hover{
+            cursor: pointer;
+        }
+        #lButton, #rButton{
+            z-index: 1;
+        }
+        #datepicker{
+            margin-top: 25px;
+        }
+        .ui-datepicker-prev, .ui-datepicker-next, .ui-datepicker-year{
+            display: none;
+        }
+    </style>
+</head>
+<body> 
+
+<div id="centerWheel">
+    <div id="centerSign">
+        <div id="centerSignName"></div>
+        <div id="centerSignMon"></div>
+    </div>
+    <div id="myDivWheel" ></div>
+</div>
+<img src="images/horoscope-button-home.png" id="lButton" style="position: fixed; width: 250px; height: auto; left: 0px; top: 50%; margin: 0px 0px 0px -200px;" />
+<input id="datepicker" style="background-color: rgba(0,0,0, 0.0); color: rgba(0,0,0,0.0); border: none; z-index: -1; position: fixed; top: 55%; right: 150px;">
+<img src="images/horoscope-button-discover.png" id="rButton" style="position: fixed; width: 250px; height: auto; right: 0px; top: 50%; margin: 0px -200px 0px 0px;" />
+
+</body>
+</html>

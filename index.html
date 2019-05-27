@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="icon" href="images/logo.png" type="image/x-icon" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="wheelnav.js-1.7.1/raphael.min.js"></script>
+    <script src="wheelnav.js-1.7.1/wheelnav.js"></script>
+    <script>
+    $(document).ready(function(){
+        $(".fadingElem").fadeIn(1500);
+
+        $("h2").click(function(){
+            $(".fadingElem").fadeOut(1500, function(){
+                    $(location).attr("href", "signs.html");
+            });
+        });
+
+        //Wheelnav Code
+        wheel = new wheelnav("myDivWheel");
+        wheel.wheelRadius = wheel.wheelRadius * 1.3;
+        wheel.navAngle = 180;
+        wheel.clockwise = false;
+        wheel.clickModeRotate = true;
+        wheel.slicePathFunction = slicePath().MenuSliceWithoutLine;
+        wheel.currentPercent = 1.0;
+        
+        wheel.animateeffect = "easeOut";
+        wheel.animatetime = 1500;
+        wheel.sliceTransformFunction = sliceTransform().ScaleTransform;
+        wheel.initWheel(["imgsrc:images/signs/aries-sm.png", "imgsrc:images/signs/taurus-sm.png", "imgsrc:images/signs/gemini-sm.png", "imgsrc:images/signs/cancer-sm.png", "imgsrc:images/signs/leo-sm.png", "imgsrc:images/signs/virgo-sm.png", "imgsrc:images/signs/libra-sm.png", "imgsrc:images/signs/scorpio-sm.png", "imgsrc:images/signs/sagittarius-sm.png", "imgsrc:images/signs/capricorn-sm.png", "imgsrc:images/signs/aquarius-sm.png", "imgsrc:images/signs/pisces-sm.png"]);
+        wheel.createWheel();
+    });
+    </script>
+    <style>
+        body{
+            overflow: hidden;
+        }
+        [class|=wheelnav-myDivWheel-slice], [class|=wheelnav-myDivWheel-slice-selected], [class|=wheelnav-myDivWheel-slice-hover], [class|=wheelnav-myDivWheel-title] {
+            fill: #cccccc;
+            stroke: none;
+            cursor: default;
+        }
+        #myDivWheel{
+            top: 50%;
+            left: 0%;
+            opacity: 0.2;
+            cursor: default;
+
+            animation-name: wheelRotate;
+            animation-duration: 60s;
+            animation-timing-function: linear;
+            animation-delay: 0s;
+            animation-iteration-count: infinite;
+            animation-play-state: running;
+        }
+        @keyframes wheelRotate{
+            0%{
+                transform: rotate(0);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+        p{
+            text-transform: lowercase;
+            margin: 5px 25px; 
+        }
+    </style>
+</head>
+<body>
+    <div id="myDivWheel" class="fadingElem" data-wheelnav data-wheelnav-cssmode></div>
+    <div class="fadingElem" id="homeHeader">
+        <h1>Clairvoyance</h1>
+        <p>We provide the keys to understanding through the stars</p>
+    </div>
+    <h2 class="fadingElem" id="bottomright">Find Your Reading</h2> 
+</body>
+
+</html>

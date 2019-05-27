@@ -1,0 +1,147 @@
+body{
+    background-image: url("images/bg2.jpg");
+    background-color: #000000;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: "Arial";
+    color: #cccccc;
+    text-shadow: 2px 2px #000000;
+}
+
+/*HEADERS*/
+h1{
+    color: #cccccc;
+    font-family: "Arial";
+    font-size: 6em;
+    margin: 5px 0px;
+}
+h2{
+    color: #cccccc;
+    font-family: "Arial";
+    font-size: 3em;
+}
+h3{
+    font-size: 2em;
+    margin: 5px 0px;
+}
+
+/*HOME PAGE ELEMENTS*/
+/*USED FOR HOMEPAGE HEADER*/
+#homeHeader{
+    display: none;
+    position: absolute;
+    top: 25%;
+    left: 25%;
+}
+/*FIND YOUR READING ON HOMEPAGE*/
+#bottomright{
+    display: none;
+    position: absolute;
+    top: 75%;
+    right: 10%;
+
+    /* animation-name: pulse; */
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+
+    cursor: pointer;
+}
+#bottomright:hover{
+    animation-name: pulse;
+}
+/*USED FOR ANIMATION ON HOMEPAGE*/
+@keyframes pulse{
+    0%, 100%{
+        color: #cccccc;
+    }
+    50%{
+        color: #034081;
+    }
+}
+
+
+/*PARAGRAPH*/
+p{
+    color: #cccccc;
+    font-family: "Arial";
+    font-size: 1.25em;
+}
+
+/*LINKS*/
+a, a:hover, a:visited{
+    color: #cccccc;
+    font-family: "Arial";
+    font-size: 2em;
+    text-decoration: none;
+}
+
+/*MY CONTAINER FOR SPINNING WHEEL*/
+#centerWheel{
+    display: block;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    white-space: nowrap;
+    top: 0; left: 0; bottom: 0; right: 0;
+}
+#centerSign{
+    position: relative;
+    top: 50%;
+    width: 500px;
+    height: 500px;
+    margin: -250px auto 0px auto;
+    background-image: none;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: 25%;
+}
+#centerSignName{
+    position: relative;
+    top: 70%;
+    font-size: 3em;
+    text-align: center;
+}
+#centerSignMon{
+    position: relative;
+    top: 70%;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+
+/*WHEELNAV.JS*/
+#myDivWheel{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 650px;
+    height: 650px;
+    margin: -325px auto 0px -325px;
+}
+
+/* ZODIAC SIGNS */
+#aries, #taurus, #gemini, #cancer, #leo, #virgo, #libra, #scorpio, #sagittarius, #capricorn, #aquarius, #pisces{
+    display: none;
+    position: relative;
+    max-width: 800px;
+    min-height: 400px;
+    padding: 20px 10px 0px 10px;
+    margin: 50px auto 0px auto;
+    text-align: left;
+}
+
+
+#ariesMOD{
+    display: none;
+    position: relative;
+    max-width: 800px;
+    min-height: 400px;
+    padding: 20px 10px 25px 10px;
+    margin: 150px auto 0px auto;
+    text-align: left;
+}

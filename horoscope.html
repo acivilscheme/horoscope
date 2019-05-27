@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<head>
+    <title>Horoscope</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="icon" href="images/logo.png" type="image/x-icon" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="horoscopeScript.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#lButton").hover(
+                function(){$(this).finish().animate({left: "+=150px"});}, 
+                function(){$(this).finish().animate({left: "-=150px"});}
+            );
+            $("#lButton").click(function(){$(location).attr("href", "index.html");});
+
+            $("#rButton").hover(
+                function(){$(this).finish().animate({right: "+=175px"});}, 
+                function(){$(this).finish().animate({right: "-=175px"});}
+            );
+            $("#rButton").click(function(){$(location).attr("href", "signs.html");});
+        });
+    </script>
+    <style>
+        #lButton:hover, #rButton:hover{
+            cursor: pointer;
+        }
+        #lButton, #rButton{
+            z-index: 1;
+        }
+        h1{
+            position: absolute;
+            top: -50px;
+            left: 25px;
+            z-index: 2;
+            font-size: 6.5em;
+            
+            color: #cccccc;
+            
+        }
+        h3{
+            position: absolute;
+            top: 45px;
+            left: 50px;
+            color: #cccccc;
+            font-size: 3em;
+            z-index: 2;
+        }
+        img.signImg{
+            position: relative;
+            float: left;
+            width: 250px;
+            height: 300px;
+            margin: 0px 15px 0px 5px;
+            border-radius: 50%;
+            background-color: #003A6A;
+            z-index: 1;
+        }
+        p{
+            position: relative;
+            font-size: 1.5em;
+            margin: 100px 0px 10px 50px;
+            padding: 25px 15px 25px 15px;
+            text-shadow: 0px 0px #000000;
+            color: #003A6A;
+            background-color: #cccccc;
+            border-radius: 10px;
+            
+        }
+        table{
+            position: relative;
+            margin: 10px 0px 0px 50px;
+            border-radius: 10px;
+            border-collapse: collapse;
+            background-color: #003A6A;   
+        }
+        table th{
+            padding: 10px;
+            background-color: #003A6A;
+            color: #cccccc;
+            text-shadow: 1px 1px #000000;
+            border-radius: 10px;
+        }
+        table td{
+            padding: 25px;
+            background-color: #cccccc;
+            border-radius: 10px;
+        }
+        tr:last-child td:first-child{border-radius: 0 0 0 10px;}
+        tr:last-child td:last-child{border-radius: 0 0 10px 0;}
+
+        .traitsTable{
+            font-size: 1.5em;
+            color: #003A6A;
+            text-shadow: 0px 0px #000000;
+        }
+
+    </style>
+</head>
+<body>
+    <img src="images/horoscope-button-home.png" id="lButton" style="position: fixed; width: 250px; height: auto; left: 0px; top: 50%; margin: 0px 0px 0px -200px;" />
+    <img src="images/horoscope-button-sign.png" id="rButton" style="position: fixed; width: 250px; height: auto; right: 0px; top: 50%; margin: 0px -200px 0px 0px;" />
+
+    <div id="aries" name="aries">
+        <h1>Aries</h1>
+        <h3>March 21-April 19</h3>
+        <img src="images/zodiac/aries-con.png" class="signImg" />
+        <p>Aries is Cardinal Fire, and the first sign of the zodiac. It’s the sign of action, new beginnings, and initiative. It likes to plunge right into things without planning. The Aries sign is high energy. The birth chart house with Aries on the cusp is where you’ll tend to be active, energetic, and take initiative. Aries is the archetype of the warrior. Planets in Aries will be highly charged, expressing themselves strongly in your life.</p>
+        <table class="traitsTable">
+                <tr><th colspan="2">Traits</th></tr>
+                <tr>
+                    <td>Positive: self-esteem, initiative, activity, pioneering, ambition, enterprise, courageous</td>
+                    <td>Negative: egotistical, quick tempered, aggressiveness, hatred of restraint, officiousness</td>
+                </tr>
+        </table>
+    </div>
+
+
+    <div id="taurus" name="taurus">
+        <h1>Taurus</h1>
+        <h3>April 20-May 20</h3>
+        <img src="images/zodiac/taurus-con.png" class="signImg" />
+        <p>The Taurus sign is the fixed Earth sign. It is slow, steady, and mostly easygoing. They say that “slow and steady wins the race,” and Taurus proves this to be true. Taurus loves to build things, and has the determination and will-power to carry out long projects. Its purposeful determination and power is used to achieve security. Taurus is a practical sign, and will not make a move unless it is assured that the person, situation, or relationship will be of use. Planets in Taurus will be colored by the qualities of: possessiveness, retentiveness, and steadiness.</p>
+        <table class="traitsTable">
+                <tr><th colspan="2">Traits</th></tr>
+                <tr>
+                    <td>Positive: affectionate, dependable, patient, stable, determination, endurance, thoroughness, conservative, harmony, possessions, practicality</td>
+                    <td>Negative: obstinacy, stubbornness, argumentative, possessiveness, love of rich food, dull</td>
+                </tr>
+        </table>
+    </div>
+
+
+    </div>
+    <div id="gemini" name="gemini">
+        <h1>Gemini</h1>
+        <h3>May 21-June 20</h3>
+        <img src="images/zodiac/gemini-con.png" class="signImg" />
+        <p>The Gemini sign is mutable air, flitting about from place to place. Gemini has expert speaking and writing skills, able to charm the uncharmable. It captures its environment, responds immediately, and moves to a new environment. Gemini is the sign of networking and communications, gathering bits of information here and there and spreading them to others who can benefit from them. Planets in Gemini will be colored by the qualities of: changeable curiosity, talkativeness, and friendliness.</p>
+        <table class="traitsTable">
+                <tr><th colspan="2">Traits</th></tr>
+                <tr>
+                    <td>Positive: versatile, adaptable, nonconformist, inquisitive, curious, quick-witted, communication, networking, congenial, tactful, mentality, thinking, writing, speaking, literacy, speech, intellectual</td>
+                    <td>Negative: changeable, fickle, indecision, superficiality, restless, nervousness</td>
+                </tr>
+        </table>
+    </div>
+
+
+    <div id="cancer" name="cancer">
+        <h1>Cancer</h1>
+        <h3>June 21-July 22</h3>
+        <img src="images/zodiac/cancer-con.png" class="signImg" />
+        <p>The Cancer sign is cardinal water. As such, it is something of a contradiction. As a cardinal zodiac sign, Cancer is assertive, a self-starter, and a "go-getter." These qualities are good for business. As water, Cancer is intuitive, feeling, and nurturing. These qualities are traditionally good for being a homemaker, among other things. A planet in Cancer will be colored by the qualities of: feeling, reserve, moods (moodiness), sensitivity, and self-protection.</p>
+        <table class="traitsTable">
+                <tr><th colspan="2">Traits</th></tr>
+                <tr>
+                    <td>Positive: domesticity, sympathy, sensitiveness, artistry, tenacity, protectiveness, caring, nurturing, maternal</td>
+                    <td>Negative: touchiness, timidity, clannishness, restlessness, indolence, overemotional, over-sentimental</td>
+                </tr>
+        </table>
+    </div>
+
+
+    <div id="leo" name="leo">
+        <h1>Leo</h1>
+        <h3>July 23-August 22</h3>
+        <img src="images/zodiac/leo-con.png" class="signImg" />
+        <p>The Leo sign is the fixed one of the fire signs. It is forceful, magnetic, generous, and impulsive. It has a strong and ardent love nature. Leo is moved through the heart rather than through reason. Like the lion, Leo is commanding, resolute, courageous, and high-spirited, sometimes boastfully asserting his superiority. Leo's warmth and kindness is of the type which a good king has towards its subjects. Leo is a loyal friend or a noble enemy. Planets in Leo will be colored by the qualities of: pride and urge for recognition, and sense of drama.</p>
+        <table class="traitsTable">
+                <tr><th colspan="2">Traits</th></tr>
+                <tr>
+                    <td>Positive: affection, nobility, generosity, loyalty, dignity, leadership, radiant, vitality, authority, will, power</td>
+                    <td>Negative: domination, arrogance, autocracy, cruelty, overbearing, vanity, ostentatious, false pride</td>
+                </tr>
+        </table>
+    </div>
+
+
+    <div id="virgo" name="virgo">
+        <h1>Virgo</h1>
+        <h3>August 23-September 22</h3>
+        <img src="images/zodiac/virgo-con.png" class="signImg" />
+        <p>The Virgo sign is mutable Earth. It is critical, discriminating, fastidious about food, alert, inquisitive, ingenious, studious, industrious, smart, neat and orderly. Virgo is characterized by spontaneous helpfulness, humility, and a need to serve. Virgo works meticulously and efficiently, continually refining its efforts and skills to develop technique leading to mastery within a chosen field. It finds security if offering practical, dependable service to an organization or a cause. Virgo uses intellect critically to organize information clearly, accurately, and usefully, bringing order out of chaos. Planets in Virgo will be colored by the qualities of: perfectionism, analysis, and fine discrimination.</p>
+        <table class="traitsTable">
+                <tr><th colspan="2">Traits</th></tr>
+                <tr>
+                    <td>Positive: analytical, methodical-ness, service, helpful, studiousness, hygiene, purity, mentality</td>
+                    <td>Negative: criticism, cynicism, fear of disease, perfectionism</td>
+                </tr>
+        </table>
+    </div>
+
+
+    <div id="libra" name="libra">
+        <h1>Libra</h1>
+        <h3>September 23-October 22</h3>
+        <img src="images/zodiac/libra-con.png" class="signImg" />
+        <p>The Libra sign is cardinal air. It is intuitive, perceptive (ability to see both sides of any situation), impartial, just, fair, harmonious, amiable and diplomatic. Libra is always comparing and reasoning. Because of this, Libra seeks a balanced exchange in one-on-one partnerships and marriage, and seeks harmony in groups. Planets in the Libra sign will be colored by the qualities of: balance, impartiality, and tact.</p>
+        <table class="traitsTable">
+                <tr><th colspan="2">Traits</th></tr>
+                <tr>
+                    <td>Positive: balance, harmony, companionship, charm, social grace, justice, courtesy, hopefulness, artistic ability, attractiveness, fairness</td>
+                    <td>Negative: always needing approbation, indecision, lack of poise, emotional fluctuation, can't say no</td>
+                </tr>
+        </table>
+    </div>
+
+
+    <div id="scorpio" name="scorpio">
+        <h1>Scorpio</h1>
+        <h3>October 23-November 21</h3>
+        <img src="images/zodiac/scorpio-con.png" class="signImg" />
+        <p>The Scorpio sign is fixed water. It is a potent, powerful sign, characterized by an ardent love nature, tremendous staying power, intense emotions, compulsive desires, secrecy, and stinging revenge. Scorpio is extremely loyal with loved ones, but when hurt, it becomes self-centered ever ready with stinging sarcasm. Scorpio is industrious, strong willed, and self-assertive, while silent, subtle, tricky, and surprisingly heroic in danger. Planets in the Scorpio sign will be colored by the qualities of: compulsive desires, depth, control, passion, and secrecy.</p>
+        <table class="traitsTable">
+                <tr><th colspan="2">Traits</th></tr>
+                <tr>
+                    <td>Positive: courage, desire, resourcefulness, cunning, secretive, austere, determined</td>
+                    <td>Negative: discord, temper, willfulness, vindictive, resentful, jealousy, envy, possessiveness, troublesome, uncompromising</td>
+                </tr>
+        </table>
+    </div>
+
+
+    <div id="sagittarius" name="sagittarius">
+        <h1>Sagittarius</h1>
+        <h3>November 22-December 21</h3>
+        <img src="images/zodiac/sagittarius-con.png" class="signImg" />
+        <p>The Sagittarius sign is is mutable fire. Sagittarius is direct and outspoken, but always well-meaning, benevolent, and a hearty "good fellow." Sagittarius is honest to a fault, to the point of bluntness. Sagittarius is a truth-seeker, liberal, care-free, unceremonious and very independent. While unconventional and impulsive, it is sympathetic and ever ready to help a good cause along. Planets in Sagittarius will be colored by the qualities of: beliefs, generalizations, and ideals.</p>
+        <table class="traitsTable">
+                <tr><th colspan="2">Traits</th></tr>
+                <tr>
+                    <td>Positive: aspiration, love of freedom, expansion, exploration, idealism, luck, orthodox religion, philosophy, law, generosity, optimism, honesty</td>
+                    <td>Negative: over-confidence, dogmatism, bluntness, exaggeration, fanaticism, sportiveness, gambling</td>
+                </tr>
+        </table>
+    </div>
+
+
+    <div id="capricorn" name="capricorn">
+        <h1>Capricorn</h1>
+        <h3>December 22-January 19</h3>
+        <img src="images/zodiac/capricorn-con.png" class="signImg" />
+        <p>The Capricorn sign is cardinal earth. It is industrious, practical, focused, sensible, hard-working, and persevering. Capricorn is serious, orderly, systematic, conventional, and economical, usually resulting in eventual success over time. Like the goat, Capricorn is steady and sure-footed as it climbs to the top, ever reaching higher and higher. And it does reach the top. Planets in Capricorn will be colored by the qualities of: self-control, caution, reserve, and ambition.</p>
+        <table class="traitsTable">
+                <tr><th colspan="2">Traits</th></tr>
+                <tr>
+                    <td>Positive: ambition, conservatism, conscientiousness, organization, position, honors, justice, caution, economy, authority</td>
+                    <td>Negative: pride, suspicion, selfishness, resentfulness, pessimism, unforgiving, deceitfulness, justice without mercy</td>
+                </tr>
+        </table>
+    </div>
+
+
+    <div id="aquarius" name="aquarius">
+        <h1>Aquarius</h1>
+        <h3>January 20-February 18</h3>
+        <img src="images/zodiac/aquarius-con.png" class="signImg" />
+        <p>The Aquarius zodiac sign is fixed air. As a fixed sign, it is loyal, but as an air sign, it is emotionally detached. The Aquarius sign is associated with friendships and groups associations, but not one-to-one relationships. Like Sagittarius, Aquarius needs freedom. Aquarius seeks to transform the community through participation in clubs, groups, and organizations. Planets in Aquarius will be colored by the qualities of: individualistic freedom, and extremism.</p>
+        <table class="traitsTable">
+                <tr><th colspan="2">Traits</th></tr>
+                <tr>
+                    <td>Positive: humanitarianism, independence, originality, progressiveness, cooperation, brotherhood, diplomacy, altruism</td>
+                    <td>Negative: argumentative, impractical, emotionally-detached, dictatorship, stubborn or closed-minded, rebellious</td>
+                </tr>
+        </table>
+    </div>
+
+
+    <div id="pisces" name="pisces">
+        <h1>Pisces</h1>
+        <h3>February 19-March 20</h3>
+        <img src="images/zodiac/pisces-con.png" class="signImg" />
+        <p>The Pisces sign is mutable water. It is characterized by sensitiveness to super-physical (supernatural) influences, a sense of unity with all life, mysticism, ripe destiny, and sacrifice. Pisces is mediumistic, sympathetic, gentle, negative, shy, timid, loyal and dependent.  It is extremely sensitive to its surroundings, and to the thoughts and feelings of others. Pisces unconsciously absorbs its surroundings. Planets in the Pisces sign will be colored by the qualities of: soul yearnings, idealism, oneness, inspiration, and vulnerability.</p>
+        <table class="traitsTable">
+                <tr><th colspan="2">Traits</th></tr>
+                <tr>
+                    <td>Positive: compassion, universality, intuitiveness, inspiration, renunciation, sacrifice</td>
+                    <td>Negative: worry, psychic negativity, introspection, lack of confidence, secretiveness, seclusion, procrastination, sorrow</td>
+                </tr>
+        </table>
+    </div>
+
+</body>
+</html>
